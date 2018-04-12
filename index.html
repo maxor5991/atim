@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Viral</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<style>
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(50%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+
+ /* Bootstrap Lightbox using Modal */
+
+#profile-grid { overflow: auto; white-space: normal; } 
+#profile-grid .profile { padding-bottom: 40px; }
+#profile-grid .panel { padding: 0 }
+#profile-grid .panel-body { padding: 15px }
+#profile-grid .profile-name { font-weight: bold; }
+#profile-grid .thumbnail {margin-bottom:6px;}
+#profile-grid .panel-thumbnail { overflow: hidden; }
+#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+
+</style>
+<body id="top">
+<div class="wrapper row0" style="background-color: #012159">
+  <div id="topbar" class="clear"> 
+    <div class="fl_left">
+      <ul class="nospace inline">
+        
+      </ul>
+    </div>
+    <div class="fl_right" >
+      <ul class="faico clear" style="color: #ffffff">
+        <li><i class="fa fa-phone"></i><b>TELÉFONO: 5649089-989928642</b></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div style="height: 10px; background-color: #ee9628"></div>
+<div class="wrapper row3">
+  <header id="header" class="container clear"> 
+    <div id="logo" class="fl_left">
+      <h1><img src="images/logo.png" alt="" style="margin-top: -25px;"></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li style="font-size: 12pt"><a href="index.html"><b>Home</b></a></li>
+        <li style="font-size: 12pt"><a class="drop" href="#"><b>Nosotros</b></a>
+          <ul>
+            <li style="font-size: 12pt"><a href="equipo.html"><b>EQUIPO</b></a></li>
+            <li style="font-size: 12pt"><a href="nosotros.html"><b>HISTORIA</b></a></li>
+          </ul>
+        </li>
+        <li style="font-size: 12pt"><a href="#"><b>Servicios</b></a></li>
+        <li style="font-size: 12pt"><a href="#"><b>Blog</b></a></li>
+        <li style="font-size: 12pt"><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li style="font-size: 12pt"><a class="faicon-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+        <li style="font-size: 12pt"><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<div>
+  <div class="overlay">
+    <img src="./images/carrusel.png" style="flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%">  
+    </section>
+  </div>
+</div>
+
+<div class="carousel-item col-md-3  ">
+                <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 2" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/200x200?text=8" alt="slide 9">
+                    </a>
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div class="wrapper row3">
+  <main class="container clear"> 
+    <div class="group">
+<ul class="nospace group services">
+  <li class="one_third first">
+   
+        <div>
+  <div class="col-lg-12" style=" font-family: Assistan; font-size: 18pt; color: #ffffff; background-color:#f8bf3f; font-family: Arial; width: 317.47px; margin-left: 15px;text-align: center;"><b>Prueba</b><br>
+
+  </div>
+  <div class="col-lg-12">
+    <img src="images/A1.png">
+  </div>
+  </div>
+   
+  </li>
+  <li class="one_third">
+       <div>
+  <div class="col-lg-12" style=" font-family: Assistan; font-size: 18pt; color: #ffffff; background-color:#f8bf3f; font-family: Arial; width: 317.47px; margin-left: 15px;text-align: center;"><b>Prueba</b><br>
+
+  </div>
+  <div class="col-lg-12">
+    <img src="images/A1.png">
+  </div>
+  </div>
+  </li>
+  <li class="one_third">
+        <div>
+  <div class="col-lg-12" style=" font-family: Assistan; font-size: 18pt; color: #ffffff; background-color:#f8bf3f; font-family: Arial; width: 317.47px; margin-left: 15px;text-align: center;"><b>Prueba</b><br>
+
+  </div>
+  <div class="col-lg-12">
+    <img src="images/A1.png">
+  </div>
+  </div>
+  </li>
+</ul>
+</div>
+<div class="clear"></div>
+</main>
+<div class="container" >
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-md-3  ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 1" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/200x200?text=1" alt="slide 1">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 3" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/200x200?text=2" alt="slide 2">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 4" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/200x200?text=3" alt="slide 3">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 active">
+                <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 5" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/200x200?text=4" alt="slide 4">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 6" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/200x200?text=5" alt="slide 5">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 7" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/200x200?text=6" alt="slide 6">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 8" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/200x200?text=7" alt="slide 7">
+                    </a>
+                  </div>
+                </div>
+            </div>
+             <div class="carousel-item col-md-3  ">
+                <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 2" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/200x200?text=8" alt="slide 8">
+                    </a>
+                  </div>
+                  
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div style="height: 10px; background-color: #012159;"></div>
+<div style="height: 5px; background-color: #ee9628;"></div>
+<div style="background-color: #1075d4; height: 100px; margin-top: -10px;" >
+<div style="width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;">
+    <p class="fl_center" style="margin-top: 10px; color: #ffffff; font-size: 12pt;"><b>Copyright &copy; ATIM S.A.C. LIMA-PERU</b><br><b>
+      Calle Santa Natalia 163 | Cercado de Lima | Lima-Perú</b><br><b>
+      Teléfono:5649089 +51 989928642 | info@atim.com.pe</b></p>
+  
+</div>
+</div>
+<div style="background-color: #ffffff; height: 50px;" >
+<div style="width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;">
+    <p class="fl_left" style="padding-left: 50px; margin-top: 15px; color: #1075d4; font-size: 17pt;"><b>TELÉFONO: 5649089 - 989928642</b><br><b>
+  
+</div>
+</div>
+
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a> 
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script language="javascript">
+$('#myCarousel').on('slide.bs.carousel', function (e) {
+
+  
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 4;
+    var totalItems = $('.carousel-item').length;
+    
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
+
+
+  $('#myCarousel').carousel({ 
+                interval: 2000
+        });
+
+
+  $(document).ready(function() {
+/* show lightbox when clicking a thumbnail */
+    $('a.thumb').click(function(event){
+      event.preventDefault();
+      var content = $('.modal-body');
+      content.empty();
+        var title = $(this).attr("title");
+        $('.modal-title').html(title);        
+        content.html($(this).html());
+        $(".modal-profile").modal({show:true});
+    });
+
+  });
+  </script>
+</body>
+</html>
